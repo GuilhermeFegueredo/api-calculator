@@ -2,7 +2,9 @@ const Hapi = require('hapi');
 
 const port = 8081;
 
-const server = new Hapi.Server();
+const server = Hapi.Server({
+    port: port
+});
 
 const init = async () => {
 await server.start();
